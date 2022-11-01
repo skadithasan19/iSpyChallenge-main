@@ -1,0 +1,42 @@
+[
+    {
+        "id": "0",
+        "email": "susanna.jones@example.com",
+        "username": "silverwolf983",
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/18.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/18.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/18.jpg"
+        }
+    },
+    {
+        "id": "1",
+        "email": "kirk.kuhn@example.com",
+        "username": "redgorilla529",
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/56.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/56.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/56.jpg"
+        }
+    },
+    {
+        "id": "2",
+        "email": "david.macrae@example.com",
+        "username": "goldenbutterfly588",
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/91.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/91.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/91.jpg"
+        }
+    },
+    {
+        "id": "3",
+        "email": "tyler.green@example.com",
+        "username": "crazyrabbit390",
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/97.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/97.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/97.jpg"
+        }
+    }
+]

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDChallenge" representedClassName="CDChallenge" syncable="YES">
+        <attribute name="creatorID" optional="YES" attributeType="String"/>
+        <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hint" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="photoImageName" optional="YES" attributeType="String"/>
+        <relationship name="matches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMatch" inverseName="challenges" inverseEntity="CDMatch"/>
+        <relationship name="ratings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDRating" inverseName="challenges" inverseEntity="CDRating"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCUser" inverseName="challenge" inverseEntity="CDCUser"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDCUser" representedClassName="CDCUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="challenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDChallenge" inverseName="users" inverseEntity="CDChallenge"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+            <uniquenessConstraint>
+                <constraint value="email"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDMatch" representedClassName="CDMatch" syncable="YES">
+        <attribute name="creatorID" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="photoImageName" optional="YES" attributeType="String"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
+        <attribute name="verified" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="challenges" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDChallenge" inverseName="matches" inverseEntity="CDChallenge"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDRating" representedClassName="CDRating" syncable="YES">
+        <attribute name="creatorID" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="stars" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="challenges" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDChallenge" inverseName="ratings" inverseEntity="CDChallenge"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>

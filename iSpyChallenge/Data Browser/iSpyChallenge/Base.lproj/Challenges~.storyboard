@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SaQ-bb-PFa">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Browser-->
+        <scene sceneID="8Xg-vA-AMr">
+            <objects>
+                <tableViewController id="SaQ-bb-PFa" customClass="DataBrowserTableViewController" customModule="iSpyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="wlZ-iW-fju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" textLabel="3Gj-sw-LDm" detailTextLabel="Yqi-dn-tWA" style="IBUITableViewCellStyleSubtitle" id="1bM-e5-gia">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1bM-e5-gia" id="hXg-Yj-dIe">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Gj-sw-LDm">
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yqi-dn-tWA">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SaQ-bb-PFa" id="XVA-fc-NbR"/>
+                            <outlet property="delegate" destination="SaQ-bb-PFa" id="f3B-E2-b8i"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Data Browser" id="sgo-GE-DaZ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="vcX-YF-iyG" kind="show" identifier="ShowUser" id="MBi-ra-hzD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGm-kl-weW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="1676"/>
+        </scene>
+        <!--Challenges-->
+        <scene sceneID="w9s-lt-SpA">
+            <objects>
+                <tableViewController id="Hsv-td-tAf" customClass="ChallengesTableViewController" customModule="iSpyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="98b-sH-jlV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChallengeCell" textLabel="iIA-CP-EAQ" detailTextLabel="VSd-sP-MCJ" style="IBUITableViewCellStyleSubtitle" id="ZKV-IG-Rkp">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZKV-IG-Rkp" id="7FU-d2-0Um">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iIA-CP-EAQ">
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VSd-sP-MCJ">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hsv-td-tAf" id="QEU-yH-Wb6"/>
+                            <outlet property="delegate" destination="Hsv-td-tAf" id="vbl-0Y-Zo8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Challenges" id="Yzt-dD-ltf"/>
+                    <connections>
+                        <segue destination="Wxg-Ze-Vw9" kind="show" identifier="ShowChallenge" id="WH4-xY-3Di"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Zi-dK-RGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="892"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="jCm-z9-Ybu">
+            <objects>
+                <tableViewController storyboardIdentifier="UITableViewController-vcX-YF-iyG" id="vcX-YF-iyG" customClass="UserTableViewController" customModule="iSpyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Urn-7N-Dvy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" textLabel="vTd-a2-wca" detailTextLabel="3cG-N9-J2Y" style="IBUITableViewCellStyleSubtitle" id="7JM-Gq-ltd">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7JM-Gq-ltd" id="0FU-6b-00S">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vTd-a2-wca">
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3cG-N9-J2Y">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vcX-YF-iyG" id="hH9-IN-4wz"/>
+                            <outlet property="delegate" destination="vcX-YF-iyG" id="Xjd-dU-SC7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User" id="Hcr-hM-cTM"/>
+                    <connections>
+                        <segue destination="Hsv-td-tAf" kind="show" identifier="ShowChallenges" id="UiV-NT-UmE"/>
+                        <segue destination="tKr-m6-8hO" kind="show" identifier="ShowMatches" id="tc0-7R-MLl"/>
+                        <segue destination="rN8-F7-5HP" kind="show" identifier="ShowRatings" id="vRu-DG-4WQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyF-f7-blR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="1675"/>
+        </scene>
+        <!--Challenge-->
+        <scene sceneID="DdR-yp-CrH">
+            <objects>
+                <tableViewController storyboardIdentifier="UITableViewController-Wxg-Ze-Vw9" id="Wxg-Ze-Vw9" customClass="ChallengeTableViewController" customModule="iSpyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="z6q-ad-z4M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChallengeCell" textLabel="Six-ev-ftl" detailTextLabel="sfh-TW-dHi" style="IBUITableViewCellStyleSubtitle" id="QUd-H1-7UW">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QUd-H1-7UW" id="7lV-La-Ng4">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Six-ev-ftl">
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfh-TW-dHi">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wxg-Ze-Vw9" id="Iz3-im-5td"/>
+                            <outlet property="delegate" destination="Wxg-Ze-Vw9" id="4q7-X0-zpQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Challenge" id="ubZ-jB-uFv"/>
+                    <connections>
+                        <segue destination="vcX-YF-iyG" kind="show" identifier="ShowUser" id="p2X-Rc-WQd"/>
+                        <segue destination="tKr-m6-8hO" kind="show" identifier="ShowMatches" id="MXg-Ej-S6r"/>
+                        <segue destination="rN8-F7-5HP" kind="show" identifier="ShowRatings" id="dHX-Ud-92a"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xol-mP-xdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4623" y="892"/>
+        </scene>
+        <!--Matches-->
+        <scene sceneID="SUb-2m-71f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Matches" id="tKr-m6-8hO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FaP-SH-VnV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7w-NZ-f9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494" y="1675"/>
+        </scene>
+        <!--Ratings-->
+        <scene sceneID="HXA-10-SAk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ratings" id="rN8-F7-5HP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WSo-Iw-WTe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-By-nod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3322" y="2528"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dHX-Ud-92a"/>
+        <segue reference="MXg-Ej-S6r"/>
+        <segue reference="p2X-Rc-WQd"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
